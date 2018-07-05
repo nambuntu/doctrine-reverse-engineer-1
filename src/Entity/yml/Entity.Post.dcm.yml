@@ -1,0 +1,27 @@
+Entity\Post:
+    type: entity
+    table: post
+    id:
+        id:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        categoryId:
+            type: integer
+            nullable: false
+            options:
+                unsigned: true
+                default: '0'
+            column: category_id
+        content:
+            type: text
+            nullable: true
+            length: 65535
+            options:
+                fixed: false
+    lifecycleCallbacks: {  }
